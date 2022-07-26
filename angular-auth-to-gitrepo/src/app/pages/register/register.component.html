@@ -1,0 +1,46 @@
+<div class="body h-100">
+  <form class="form-signin" [formGroup]="form" (submit)="submit()">
+    <h1 class="h3 mb-3 fw-normal">Register</h1>
+  
+    <input
+      formControlName="first_name"
+      type="text"
+      class="form-control"
+      placeholder="First name"
+      required
+    />
+  
+    <input
+      formControlName="last_name"
+      type="text"
+      class="form-control"
+      placeholder="Last name"
+      required
+    />
+  
+    <input
+      formControlName="email"
+      type="email"
+      class="form-control"
+      placeholder="email"
+      required
+    />
+    <input
+      formControlName="password"
+      type="password"
+      class="form-control"
+      placeholder="Password Confirm"
+      required
+    />
+    <input
+      formControlName="password_confirm"
+      type="password"
+      class="form-control"
+      placeholder="Password Confirm"
+      required
+    />
+  
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+  </form>
+  
+</div>

@@ -1,0 +1,10 @@
+<div class="body h-100">
+    <form class="form-signin" [formGroup]="form" (submit)="submit()">
+        <div *ngIf="cls" class="alert alert-{{cls}}" role="alert">
+            {{message}}
+        </div>
+        <h1 class="h3 mb-3 fw-normal">Forgot Password</h1>
+        <input formControlName="email" type="email" class="form-control mb-3" placeholder="Email" required />
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+    </form>
+</div>

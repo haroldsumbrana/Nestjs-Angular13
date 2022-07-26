@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expandedmd navbar-dark bg-dark px-2">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a routerLink="/" class="nav-link"> Home </a>
+    </li>
+  </ul>
+  <ul class="navbar-nav my-2 my-lg-0 d-flex flex-row gap_10px pr-2">
+    <ng-container *ngIf="authenticated">
+      <li class="nav-item">
+        <a routerLink="/login" class="nav-link" (click)="logout()"> Logout </a>
+      </li>
+    </ng-container>
+    <ng-container *ngIf="!authenticated">
+      <li class="nav-item">
+        <a routerLink="/login" class="nav-link"> Login </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/register" class="nav-link"> Register </a>
+      </li>
+    </ng-container>
+
+
+  </ul>
+</nav>
+
+<style>
+  .gap_10px {
+    gap: 10px;
+  }
+</style>
